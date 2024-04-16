@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+/*
+2. 디폴트 매개변수
 int big(int a, int b, int max = 100) {
   if (a > max || b > max)
     return max;
@@ -8,6 +10,17 @@ int big(int a, int b, int max = 100) {
     return a;
   else
     return b;
+}*/
+
+// 1. 함수중복
+int big(int x, int y) {
+  int max = (x > y) ? x : y;
+  return (max > 100) ? 100 : max;
+}
+
+int big(int x, int y, int z) {
+  int max = (x > y) ? x : y;
+  return (max > z) > z ? z : max;
 }
 
 int main() {
